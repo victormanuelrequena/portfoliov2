@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --purple: #4831d4;
+  --appleGreen: #ccf381;
+  --white: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+  } */
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'SF UI Text';
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  src: url('../../public/fonts/SF-UI-Text-Heavy.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  src: url('../../public/fonts/SF-UI-Text-Regular.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  src: url('../../public/fonts/SF-UI-Text-Bold.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  src: url('../../public/fonts/SF-UI-Text-Light.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200;
+}
