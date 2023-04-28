@@ -1,8 +1,6 @@
 <template>
   <section>
-    <header>
-      <img class="vic-logo" src="../../assets/vicLogoFill.svg" alt="" />
-    </header>
+    <Header />
     <div class="box-left">
       <div class="box-presentation">
         <h1>
@@ -35,18 +33,27 @@
       </div>
     </div>
     <div class="box-right">
-      <!-- <div class="box-image-mobile">
+      <div class="box-image-mobile">
         <img
           class="profile-mobile"
           src="../../assets/profile-light.jpg"
           alt=""
         />
         <div class="box-line-mobile"></div>
-      </div> -->
+      </div>
     </div>
     <img class="hero-line" src="../../assets/heroLine.svg" alt="" />
   </section>
 </template>
+
+<script>
+import Header from '../Header/index.vue';
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
 
 <style scoped>
 section {
@@ -57,20 +64,6 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   overflow-x: hidden;
-}
-header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  padding: 0 32px;
-  height: 107px;
-  display: flex;
-  align-items: center;
-}
-.vic-logo {
-  width: 90px;
-  height: 34px;
 }
 .hero-line {
   position: absolute;
@@ -185,10 +178,6 @@ header {
     /* height: clamp(29.63rem, calc(9.91rem + 30.8vw), 46.88rem); */
     height: 95vh;
   }
-  header {
-    padding: clamp(2rem, calc(-0.29rem + 3.57vw), 4rem)
-      clamp(3.88rem, calc(1.38rem + 3.91vw), 6.06rem) 0;
-  }
   .box-image {
     display: block;
   }
@@ -199,10 +188,6 @@ header {
   .box-left {
     padding-top: clamp(8.75rem, calc(5.18rem + 5.58vw), 11.88rem);
     height: 100vh;
-  }
-  .vic-logo {
-    width: 130px;
-    height: 67px;
   }
   .box-presentation {
     padding-top: 40px;

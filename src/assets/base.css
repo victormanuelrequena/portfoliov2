@@ -13,6 +13,9 @@
   --purple: #4831d4;
   --appleGreen: #ccf381;
   --white: #fff;
+  --whiteSmoke: #f5f4fc;
+  --smoke: #f9f8fd;
+  --textBlack: #474747;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +26,12 @@
 body {
   min-height: 100vh;
   font-family: 'SF UI Text';
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 @font-face {
