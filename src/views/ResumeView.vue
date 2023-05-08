@@ -1,24 +1,35 @@
-<script></script>
+<script>
+import Project from '../components/resume/Project.vue';
+import Constants from '../components/resume/constants.js';
+export default {
+  components: {
+    Project,
+  },
+  data() {
+    return {
+      GDS: Constants.GDS,
+      WAU: Constants.WAU,
+      YUFI: Constants.YUFI,
+      FASTWPAY: Constants.FASTWPAY,
+    };
+  },
+};
+</script>
 <template>
+  <head>
+    <title>My Resume</title>
+  </head>
   <div class="resume-container">
     <div class="box">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-      >
-        <path
-          fill="#0077b5"
-          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-        ></path>
-      </svg>
-      <svg
-        viewBox="8 8.003 48 47.997"
-        height="12"
-        width="12"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <a href="https://www.linkedin.com/in/victor-requena-5b1901212/" target="_blank">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path
+            fill="#0077b5"
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+          ></path>
+        </svg>
+      </a>
+      <svg viewBox="8 8.003 48 47.997" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="#474747e6"
           d="M29.283 12.19a19.624 19.624 0 015.434 0 2 2 0 00.567-3.959 23.75 23.75 0 00-6.566 0 2 2 0 00.565 3.959z"
@@ -38,9 +49,9 @@
       <div class="side-left">
         <!-- Personal info (Web, location and mailto) -->
         <div class="basic-info">
-          <a>victor.io</a>
+          <a href="http://localhost:5173">requena.dev</a>
           <p>Delta Amacuro, Venezuela</p>
-          <p>vincereimmanuel@gmail.com</p>
+          <a href="mailto:vincereimmanuel@gmail.com?subject=Hi, Victor">vincereimmanuel@gmail.com</a>
         </div>
         <!-- Core technologies -->
         <div class="core-tech">
@@ -71,27 +82,23 @@
         </h1>
         <h2 class="profile-description">Frontend Developer</h2>
         <p class="about-me">
-          Soy un desarrollador frontend y back especializado en crear proyectos
-          web de alto valor. Me apasiona aprender y enfrentar desafíos,
-          abrazando los procesos de desarrollo.
+          Soy un desarrollador frontend y back especializado en crear proyectos web de alto valor. Me apasiona aprender
+          y enfrentar desafíos, abrazando los procesos de desarrollo.
         </p>
         <h4 class="experience">Experience</h4>
         <p class="exp-description">
-          I’ve worked on a handful of web projects over the years, some of which
-          were for the following organizations:
+          I’ve worked on a handful of web projects over the years, some of which were for the following organizations:
         </p>
         <!-- Experience Section -->
         <section class="exp-section">
-          <div class="exp-section-box">
-            <div>
-              <h2>Genius</h2>
-              <h3>Frontend Developer</h3>
-            </div>
-            <p class="exp-date">May 2020 - Present</p>
-          </div>
+          <Project :company="GDS.name" :date="GDS.date" :role="GDS.role" :goalsList="GDS.goals" />
+          <Project :company="WAU.name" :date="WAU.date" :role="WAU.role" :goalsList="WAU.goals" />
+          <Project :company="FASTWPAY.name" :date="FASTWPAY.date" :role="FASTWPAY.role" :goalsList="FASTWPAY.goals" />
+          <Project :company="YUFI.name" :date="YUFI.date" :role="YUFI.role" :goalsList="YUFI.goals" />
         </section>
       </div>
     </div>
+    <img class="vic-logo" src="../assets/vicLogo_purple.svg" alt="Victor" />
   </div>
 </template>
 
@@ -104,6 +111,7 @@
   margin: 0 auto;
   margin-top: 60px;
   position: relative;
+  padding-bottom: 60px;
 }
 .box {
   width: auto;
@@ -112,6 +120,11 @@
   position: absolute;
   top: 2rem;
   right: 2rem;
+  z-index: 1;
+}
+.box a,
+.box svg {
+  cursor: pointer;
 }
 .box svg:nth-child(1) {
   margin-right: 10px;
@@ -163,7 +176,6 @@
 .basic-info p:nth-child(2)::after {
   display: none;
 }
-
 .basic-info p::after,
 .basic-info a::after {
   display: inline-block;
@@ -227,11 +239,21 @@
 }
 .main-content .about-me {
   max-width: 70%;
-  margin: 3em 0 2em 0;
+  margin: 3em 0 4em 0;
   font-size: 17.28px;
   font-weight: light;
   line-height: 175%;
   color: var(--textBlack);
+  position: relative;
+}
+.main-content .about-me::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  height: 1px;
+  left: 20px;
+  width: 155%;
+  background-color: var(--textGray);
 }
 .experience {
   /* border: 1px solid red; */
@@ -267,40 +289,23 @@
 }
 .exp-section {
   /* border: 1px solid red; */
-}
-.exp-section-box {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  row-gap: 40px;
 }
-.exp-section-box div {
-  display: flex;
+.vic-logo {
+  position: absolute;
 }
-.exp-section-box div h2 {
-  color: var(--purple);
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-.exp-section-box div h2::after {
-  content: '';
-  display: inline-block;
-  min-width: 22px;
-  height: 2px;
-  background-color: var(--textBlack);
-  opacity: 0.75;
-  margin: 0 10px;
-}
-.exp-section-box div h3 {
-  font-size: 18px;
-  color: var(--textBlack);
-  opacity: 0.9;
-  font-weight: 500;
-}
-.exp-date {
-  font-size: 14.4px;
-  color: var(--textBlack);
-  opacity: 0.75;
+@media (min-width: 1024px) {
+  .resume-container {
+    padding-bottom: 140px;
+    margin-bottom: 80px;
+  }
+  .vic-logo {
+    width: 100px;
+    height: 50px;
+    left: 50px;
+    bottom: 40px;
+  }
 }
 </style>

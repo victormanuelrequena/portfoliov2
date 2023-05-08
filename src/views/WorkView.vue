@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Header />
+    <Header :purpleLogo="true" />
     <main>
       <div class="box">
         <h2><span>/</span>work.</h2>
@@ -9,15 +9,20 @@
       <!-- List of works -->
       <div class="list-works">
         <!-- Work card -->
-        <figure>
-          <a href="https://fastwpay.com" target="_blank">
-            <img src="../assets/companiesLogos/fastwpay.svg" alt="" />
-          </a>
-          <div class="project-info">
-            <h3>Fastwpay</h3>
-            <a href="https://fastwpay.com" target="_blank">fastwpay.com</a>
-          </div>
-        </figure>
+        <WorkCard :siteUrl="FASTWPAY.siteUrl" :name="FASTWPAY.name" :image="FASTWPAY.image" :domain="FASTWPAY.domain" />
+        <WorkCard
+          :siteUrl="GRIVER.siteUrl"
+          :name="GRIVER.name"
+          :image="GRIVER.image"
+          :domain="GRIVER.domain"
+          :isPublic="false"
+        />
+        <WorkCard
+          :siteUrl="PORTFOLIO.siteUrl"
+          :name="PORTFOLIO.name"
+          :image="PORTFOLIO.image"
+          :domain="PORTFOLIO.domain"
+        />
       </div>
     </main>
   </section>
@@ -25,10 +30,20 @@
 
 <script>
 import Header from '../components/Header/index.vue';
+import WorkCard from '../components/work/WorkCard.vue';
+import Constants from '../components/work/constants';
 
 export default {
   components: {
     Header,
+    WorkCard,
+  },
+  data() {
+    return {
+      FASTWPAY: Constants.FASTWPAY,
+      GRIVER: Constants.GRIVER,
+      PORTFOLIO: Constants.PORTFOLIO,
+    };
   },
 };
 </script>
@@ -63,43 +78,7 @@ section {
 .list-works {
   width: 86%;
   margin: 40px auto;
-}
-figure {
-  width: 368px;
-  height: 305px;
-  background-color: var(--smoke);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 5px;
-  transition: all 0.5s;
-}
-figure:hover {
-  transform: translateY(-4%);
-  box-shadow: 15px 8px 6px -6px rgba(235, 234, 242, 0.58);
-}
-figure > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  cursor: pointer;
-}
-figure .box-logo img {
-  width: 150px;
-}
-.project-info {
-  background-color: var(--white);
-  padding: 36px;
-}
-.project-info h3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--textBlack);
-}
-.project-info a {
-  color: var(--purple);
-  font-size: 18px;
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
 }
 </style>
