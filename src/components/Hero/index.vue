@@ -5,40 +5,23 @@
       <div class="box-presentation">
         <h1>
           Frontend <br />
-          Developer<span>.</span>
+          Developer<span class="point">.</span>
         </h1>
-        <p>
-          I like to craft solid and scalable frontend products with great user
-          experiences.
-        </p>
+        <p>I like to craft solid and scalable frontend products with great user experiences.</p>
         <div class="sub-description-box">
-          <p>
-            Highly skilled at progressive enhancement, design systems & UI
-            Engineering.
-          </p>
-          <p>
-            Proven experience building successful products for clients across
-            several countries.
-          </p>
+          <p>Highly skilled at progressive enhancement, design systems & UI Engineering.</p>
+          <p>Proven experience building successful products for clients across several countries.</p>
         </div>
       </div>
       <div class="box-image">
         <img class="profile" src="../../assets/profile-light.jpg" alt="" />
         <div class="box-line"></div>
-        <img
-          class="profile-shapes"
-          src="../../assets/profileShapes.svg"
-          alt=""
-        />
+        <img class="profile-shapes" src="../../assets/profileShapes.svg" alt="" />
       </div>
     </div>
     <div class="box-right">
       <div class="box-image-mobile">
-        <img
-          class="profile-mobile"
-          src="../../assets/profile-light.jpg"
-          alt=""
-        />
+        <img class="profile-mobile" src="../../assets/profile-light.jpg" alt="" />
         <div class="box-line-mobile"></div>
       </div>
     </div>
@@ -63,7 +46,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .hero-line {
   position: absolute;
@@ -87,14 +70,17 @@ section {
   background-color: var(--appleGreen);
 }
 .box-presentation {
-  /* border: 1px solid red; */
   padding-top: 146px;
+}
+.point {
+  font-size: 102px;
+  line-height: 0;
 }
 .box-presentation h1 {
   font-weight: 900;
   font-size: 42px;
   color: var(--appleGreen);
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   font-stretch: 100%;
 }
 .box-presentation h1 span {
@@ -206,7 +192,8 @@ section {
     padding-left: clamp(5.63rem, calc(-1.52rem + 11.16vw), 11.88rem);
   }
   .hero-line {
-    display: inline-block;
+    display: flex;
+    position: absolute;
   }
 }
 </style>

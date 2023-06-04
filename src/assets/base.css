@@ -17,6 +17,7 @@ li {
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --purple: #4831d4;
+  --darkPurple: #3d155f;
   --appleGreen: #ccf381;
   --white: #fff;
   --whiteSmoke: #f5f4fc;
@@ -33,6 +34,10 @@ li {
 body {
   min-height: 100vh;
   font-family: 'SF UI Text';
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button {

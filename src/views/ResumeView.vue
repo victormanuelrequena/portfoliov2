@@ -58,36 +58,44 @@ export default {
           <h4>Core Technologies:</h4>
           <ul>
             <li>Javascript</li>
-            <li>React</li>
-            <li>CSS-in-JS</li>
             <li>Typescript</li>
-            <li>Vue.js</li>
+            <li>React</li>
+            <li>NextJS</li>
+            <li>VueJS</li>
+            <li>NuxtJS</li>
+            <li>Styled-components</li>
             <li>Tailwind CSS</li>
+            <li>Material UI</li>
             <li>Redux</li>
-            <li>Next.js</li>
-            <li>Formik</li>
             <li>NodeJS</li>
+            <li>ExpressJS</li>
+            <li>NestJS</li>
             <li>PHP</li>
             <li>Laravel</li>
             <li>SQL</li>
             <li>MongoDB</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>Wordpress - Divi</li>
+            <li>WP Plugins</li>
           </ul>
         </div>
       </div>
       <div class="main-content">
         <h1>
-          Victor Manuel
+          Victor
           <br />
           Requena
         </h1>
-        <h2 class="profile-description">Frontend Developer</h2>
+        <h2 class="profile-description">Frontend y Backend Developer</h2>
         <p class="about-me">
           Soy un desarrollador frontend y back especializado en crear proyectos web de alto valor. Me apasiona aprender
           y enfrentar desafíos, abrazando los procesos de desarrollo.
         </p>
         <h4 class="experience">Experience</h4>
         <p class="exp-description">
-          I’ve worked on a handful of web projects over the years, some of which were for the following organizations:
+          He trabajado en un puñado de proyectos web a lo largo de los años, algunos de los cuales fueron para las
+          siguientes organizaciones:
         </p>
         <!-- Experience Section -->
         <section class="exp-section">
@@ -98,7 +106,7 @@ export default {
         </section>
       </div>
     </div>
-    <img class="vic-logo" src="../assets/vicLogo_purple.svg" alt="Victor" />
+    <img class="vic-logo" width="100px" src="../assets/vicLogo_purple.svg" alt="Victor" />
   </div>
 </template>
 
@@ -204,13 +212,13 @@ export default {
 .core-tech ul {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
   margin-top: 6px;
 }
 .core-tech li {
   color: #474747bf;
   list-style: none;
   font-size: 14.4px;
+  margin-top: 8px;
 }
 .core-tech li::before {
   width: 0.4em;
@@ -291,7 +299,12 @@ export default {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+}
+.exp-section > div {
+  margin-top: 40px;
+}
+.exp-section > div:nth-child(1) {
+  margin-top: 0px;
 }
 .vic-logo {
   position: absolute;

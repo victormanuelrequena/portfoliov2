@@ -118,7 +118,7 @@ header {
   padding-left: 40px;
   width: 352px;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 30px;
   right: 50px;
   visibility: hidden;

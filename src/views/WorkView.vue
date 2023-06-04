@@ -51,7 +51,7 @@ export default {
 <style scoped>
 section {
   background-color: var(--whiteSmoke);
-  height: 100vh;
+  padding-bottom: 160px;
 }
 .box {
   width: 100%;
