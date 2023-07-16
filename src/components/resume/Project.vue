@@ -68,18 +68,21 @@ export default {
 .goals-achieved {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
 }
 .goals-achieved > li {
   color: #474747bf;
   list-style: none;
   max-width: 55ch;
   line-height: 150%;
+  margin-top: 14px;
+}
+.goals-achieved > li:nth-child(1) {
+  margin-top: 0;
 }
 .goals-achieved > li::before {
-  width: 0.4em;
+  min-width: 0.4em;
   content: '';
-  height: 0.41em;
+  min-height: 0.41em;
   margin-right: 0.3em;
   vertical-align: 10%;
   display: inline-block;

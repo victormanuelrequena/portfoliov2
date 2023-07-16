@@ -19,8 +19,16 @@ const PORTFOLIO = {
   domain: 'requena.dev',
 };
 
+const ZKOOL = {
+  siteUrl: 'https://nextstation.cl',
+  image: 'https://s3.amazonaws.com/nextstation.cl/wp-content/uploads/2019/08/27185722/logo-black-45.png',
+  name: 'NextStation',
+  domain: 'NextStation.cl',
+};
+
 export default {
   FASTWPAY,
   GRIVER,
   PORTFOLIO,
+  ZKOOL
 };

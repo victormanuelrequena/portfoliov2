@@ -1,33 +1,35 @@
 <template>
   <footer>
-    <div class="footer-main">
-      <div class="say-hello">
-        <div>
-          <h4>Say Hello</h4>
+    <div class="wrapper">
+      <div class="footer-main">
+        <div class="say-hello">
+          <div>
+            <h4>Say Hello</h4>
+            <ul>
+              <li>
+                <a href="mailto:vincereimmanuel@gmail.com?subject=Hi, Victor">hello@gmail.com</a>
+              </li>
+              <li>
+                <a href="https://t.me/requesux" target="_blank">t.me/requesux</a>
+              </li>
+            </ul>
+          </div>
           <ul>
             <li>
-              <a href="mailto:vincereimmanuel@gmail.com?subject=Hi, Victor">hello@gmail.com</a>
+              <a href="/work">My Work</a>
             </li>
             <li>
-              <a href="https://t.me/requesux" target="_blank">t.me/requesux</a>
+              <a href="/shelf">My Shelf</a>
+            </li>
+            <li>
+              <a @click="toggle()" href="/resume" target="_blank">My Resume</a>
             </li>
           </ul>
         </div>
-        <ul>
-          <li>
-            <a href="/work">My Work</a>
-          </li>
-          <li>
-            <a href="/shelf">My Shelf</a>
-          </li>
-          <li>
-            <a @click="toggle()" href="/resume" target="_blank">My Resume</a>
-          </li>
-        </ul>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© Victor Requena 2023</p>
+      <div class="footer-bottom">
+        <p>© Victor Requena 2023</p>
+      </div>
     </div>
   </footer>
 </template>
@@ -39,9 +41,8 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
   background-color: var(--darkPurple);
-  padding: 40px 44px;
+  padding: 80px 44px;
 }
 .footer-main {
   /* border: 1px solid red; */
@@ -84,9 +85,25 @@ footer {
     display: flex;
   }
   .say-hello > ul:nth-child(2) {
-    /* border: 1px solid red; */
-    margin-top: 30px;
+    margin-top: 44px;
     margin-left: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    height: 100vh;
+    padding: 0 120px 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-main {
+  }
+  .wrapper {
+    width: 92%;
+  }
+  .say-hello > ul:nth-child(2) {
+    margin-left: 180px;
   }
 }
 </style>

@@ -26,7 +26,7 @@ async function main() {
       printBackground: true,
       pageRanges: '1',
       width: '1230px',
-      height: '2000px',
+      height: '2440px',
       path: pdfFilePath,
       margin: { top: '85px', right: '85px', bottom: '85px', left: '85px' },
     });

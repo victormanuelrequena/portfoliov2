@@ -43,13 +43,13 @@ export default {
           d="M22.586 36.586a2 2 0 000 2.828l8 8c.39.391.902.586 1.414.586s1.023-.195 1.414-.586l8-8a2 2 0 10-2.828-2.828L34 41.172V18a2 2 0 00-4 0v23.172l-4.586-4.586a2 2 0 00-2.828 0z"
         ></path>
       </svg>
-      <p>Download</p>
+      <p>Descargar</p>
     </div>
     <div class="grid-main">
       <div class="side-left">
         <!-- Personal info (Web, location and mailto) -->
         <div class="basic-info">
-          <a href="http://localhost:5173">requena.dev</a>
+          <!-- <a href="http://localhost:5173">requena.dev (Prox)</a> -->
           <p>Delta Amacuro, Venezuela</p>
           <a href="mailto:vincereimmanuel@gmail.com?subject=Hi, Victor">vincereimmanuel@gmail.com</a>
         </div>
@@ -92,7 +92,7 @@ export default {
           Soy un desarrollador frontend y back especializado en crear proyectos web de alto valor. Me apasiona aprender
           y enfrentar desafíos, abrazando los procesos de desarrollo.
         </p>
-        <h4 class="experience">Experience</h4>
+        <h4 class="experience">Experiencia</h4>
         <p class="exp-description">
           He trabajado en un puñado de proyectos web a lo largo de los años, algunos de los cuales fueron para las
           siguientes organizaciones:
@@ -106,14 +106,19 @@ export default {
         </section>
       </div>
     </div>
-    <img class="vic-logo" width="100px" src="../assets/vicLogo_purple.svg" alt="Victor" />
+    <img
+      class="vic-logo"
+      style="width: 150px; height: 75px; position: absolute; bottom: 50px; left: 50px"
+      src="../assets/vicLogo_purple.svg"
+      alt="Victor"
+    />
   </div>
 </template>
 
 <style scoped>
 .resume-container {
   /* border: 1px solid red; */
-  width: 1117px;
+  width: 1180px;
   background-color: var(--whiteSmoke);
   min-height: 100vh;
   margin: 0 auto;
@@ -278,7 +283,7 @@ export default {
   display: inline-block;
   content: '';
   background-color: var(--appleGreen);
-  width: 109%;
+  width: 139%;
   height: 0.4em;
   position: absolute;
   bottom: 0px;
@@ -293,6 +298,7 @@ export default {
   color: var(--textBlack);
   opacity: 0.9;
   font-size: 17.28px;
+  line-height: 175%;
   font-weight: light;
 }
 .exp-section {

@@ -1,9 +1,9 @@
 <template>
   <section>
-    <Header :purpleLogo="true" />
+    <Header :static="true" :purpleLogo="true" />
     <main>
       <div class="box">
-        <h2><span>/</span>work.</h2>
+        <h2><span>/</span>work<span>.</span></h2>
         <p>Selected work I've taken on in the past.</p>
       </div>
       <!-- List of works -->
@@ -23,13 +23,21 @@
           :image="PORTFOLIO.image"
           :domain="PORTFOLIO.domain"
         />
+        <WorkCard
+          :siteUrl="ZKOOL.siteUrl"
+          :name="ZKOOL.name"
+          :image="ZKOOL.image"
+          :domain="ZKOOL.domain"
+        />
       </div>
     </main>
   </section>
+  <Footer />
 </template>
 
 <script>
 import Header from '../components/Header/index.vue';
+import Footer from '../components/Footer/index.vue';
 import WorkCard from '../components/work/WorkCard.vue';
 import Constants from '../components/work/constants';
 
@@ -37,12 +45,14 @@ export default {
   components: {
     Header,
     WorkCard,
+    Footer,
   },
   data() {
     return {
       FASTWPAY: Constants.FASTWPAY,
       GRIVER: Constants.GRIVER,
       PORTFOLIO: Constants.PORTFOLIO,
+      ZKOOL: Constants.ZKOOL,
     };
   },
 };
@@ -51,7 +61,7 @@ export default {
 <style scoped>
 section {
   background-color: var(--whiteSmoke);
-  padding-bottom: 160px;
+  padding-bottom: 80px;
 }
 .box {
   width: 100%;
@@ -79,6 +89,12 @@ section {
   width: 86%;
   margin: 40px auto;
   display: grid;
+  row-gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+}
+@media (min-width: 1024px) {
+  section {
+    padding-bottom: 160px;
+  }
 }
 </style>

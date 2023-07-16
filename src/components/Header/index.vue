@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="static && 'static'">
     <a href="/">
       <img class="vic-logo" :src="logo" alt="Victor" />
     </a>
@@ -36,6 +36,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    static: {
+      type: Boolean,
+      default: false
+    }
   },
   // State
   data() {
@@ -58,7 +62,7 @@ export default {
 <style scoped>
 header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 20;
   padding: 0 32px;
@@ -66,6 +70,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.static {
+  position: absolute;
 }
 .vic-logo {
   width: 90px;
