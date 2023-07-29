@@ -24,11 +24,19 @@
           :domain="PORTFOLIO.domain"
         />
         <WorkCard
-          :siteUrl="ZKOOL.siteUrl"
-          :name="ZKOOL.name"
-          :image="ZKOOL.image"
-          :domain="ZKOOL.domain"
+          :siteUrl="NEXTSTATION.siteUrl"
+          :name="NEXTSTATION.name"
+          :image="NEXTSTATION.image"
+          :domain="NEXTSTATION.domain"
         />
+        <WorkCard
+          :siteUrl="GENIUS.siteUrl"
+          :name="GENIUS.name"
+          :image="GENIUS.image"
+          :domain="GENIUS.domain"
+          :isPublic="false"
+        />
+        <WorkCard :siteUrl="YUFI.siteUrl" :name="YUFI.name" :image="YUFI.image" :domain="YUFI.domain" />
       </div>
     </main>
   </section>
@@ -52,7 +60,9 @@ export default {
       FASTWPAY: Constants.FASTWPAY,
       GRIVER: Constants.GRIVER,
       PORTFOLIO: Constants.PORTFOLIO,
-      ZKOOL: Constants.ZKOOL,
+      NEXTSTATION: Constants.NEXTSTATION,
+      GENIUS: Constants.GENIUS,
+      YUFI: Constants.YUFI,
     };
   },
 };
@@ -87,10 +97,11 @@ section {
 }
 .list-works {
   width: 86%;
+  max-width: 1200px;
   margin: 40px auto;
   display: grid;
   row-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  grid-template-columns: repeat(3, minmax(368px, 1fr));
 }
 @media (min-width: 1024px) {
   section {

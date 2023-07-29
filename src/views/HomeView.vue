@@ -1,12 +1,14 @@
 <script setup>
 import Hero from '../components/Hero/index.vue';
 import Footer from '../components/Footer/index.vue';
+import SendMeMessage from '../components/SendMeMessage/SendMeMessage.vue';
 </script>
 
 <template>
   <main>
     <Hero />
-    <Footer />
+    <SendMeMessage />
+    <Footer mode="large" />
   </main>
 </template>
 

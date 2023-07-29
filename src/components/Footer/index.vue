@@ -1,5 +1,11 @@
+<script setup>
+const props = defineProps({
+  mode: '',
+});
+</script>
+
 <template>
-  <footer>
+  <footer :class="mode === 'large' && 'large'">
     <div class="wrapper">
       <div class="footer-main">
         <div class="say-hello">
@@ -91,11 +97,14 @@ footer {
 }
 @media (min-width: 1024px) {
   footer {
-    height: 100vh;
+    height: 60vh;
     padding: 0 120px 0 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .large {
+    height: 100vh;
   }
   .footer-main {
   }
