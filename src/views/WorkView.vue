@@ -70,7 +70,7 @@ export default {
 
 <style scoped>
 section {
-  background-color: var(--whiteSmoke);
+  background-color: var(--bgColor);
   padding-bottom: 80px;
 }
 .box {

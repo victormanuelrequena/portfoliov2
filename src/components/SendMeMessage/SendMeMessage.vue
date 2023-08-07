@@ -18,7 +18,6 @@ import Form from './Form.vue';
 section {
   background-color: var(--smoke);
   padding: 0 40px;
-  padding-top: 100px;
   padding-bottom: 80px;
 }
 h2 {

@@ -32,6 +32,7 @@ li {
   --smoke: #f9f8fd;
   --textBlack: #474747;
   --textGray: #cbc9e2;
+  --bgColor: #f9f9f9;
 }
 
 @media (prefers-color-scheme: dark) {
