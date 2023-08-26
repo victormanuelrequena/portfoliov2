@@ -44,8 +44,6 @@ button:hover svg {
 @media (min-width: 601px) {
   button {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 

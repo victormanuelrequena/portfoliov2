@@ -38,7 +38,7 @@ const router = useRouter();
 <style scoped>
 section {
   background-color: var(--bgColor);
-  padding: 80px 40px;
+  padding: 80px 24px;
 }
 .box {
   background-color: var(--white);
@@ -49,12 +49,43 @@ section {
 }
 h2 {
   color: var(--purple);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 900;
 }
 p {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--darkPurple);
+}
+
+@media (min-width: 601px) {
+  .container {
+    width: 100%;
+    display: flex;
+  }
+  .box {
+    width: 100%;
+    border-right: 1px solid var(--purple);
+  }
+  .box:nth-child(2) {
+    border: none;
+  }
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    min-width: 900px;
+    max-width: 80%;
+    margin: auto;
+  }
+  .box {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 </style>
