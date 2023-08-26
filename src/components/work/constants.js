@@ -28,7 +28,7 @@ const NEXTSTATION = {
 
 const GENIUS = {
   siteUrl: 'https://geniuspro.io',
-  image: '/src/assets/companiesLogos/genius.svg',
+  image: '/portfoliov2-snowy/src/assets/companiesLogos/genius.svg',
   name: 'Genius',
   domain: '',
 };
