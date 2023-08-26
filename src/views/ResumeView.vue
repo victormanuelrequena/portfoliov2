@@ -109,7 +109,7 @@ export default {
     <img
       class="vic-logo"
       style="width: 150px; height: 75px; position: absolute; bottom: 50px; left: 50px"
-      src="../assets/vicLogo_purple.svg"
+      src="/assets/vicLogo_purple.svg"
       alt="Victor"
     />
   </div>
