@@ -18,7 +18,6 @@ import Form from './Form.vue';
 section {
   background-color: var(--smoke);
   padding: 0 40px;
-  padding-bottom: 80px;
 }
 h2 {
   font-size: 2rem;
@@ -44,7 +43,11 @@ p {
 }
 @media (min-width: 1024px) {
   section {
-    padding: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   h2 {
     font-size: 3rem;
