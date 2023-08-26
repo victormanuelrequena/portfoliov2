@@ -1,22 +1,20 @@
-const domain = 'https://portfoliov2-snowy.vercel.app';
-
 const FASTWPAY = {
   siteUrl: 'https://fastwpay.com',
-  image: domain + '/src/assets/companiesLogos/fastwpay.svg',
+  image: '/src/assets/companiesLogos/fastwpay.svg',
   name: 'Fastwpay',
   domain: 'fastwpay.com',
 };
 
 const GRIVER = {
   siteUrl: 'https://griver.mx',
-  image: domain + '/src/assets/companiesLogos/griver.svg',
+  image: '/src/assets/companiesLogos/griver.svg',
   name: 'Griver',
   domain: 'griver.mx',
 };
 
 const PORTFOLIO = {
   siteUrl: 'https://requena.dev',
-  image: domain + '/src/assets/vicLogo_purple.svg',
+  image: '/src/assets/vicLogo_purple.svg',
   name: 'Personal Website',
   domain: 'requena.dev',
 };
@@ -30,14 +28,14 @@ const NEXTSTATION = {
 
 const GENIUS = {
   siteUrl: 'https://geniuspro.io',
-  image: domain + '/src/assets/companiesLogos/genius.svg',
+  image: '/src/assets/companiesLogos/genius.svg',
   name: 'Genius',
   domain: '',
 };
 
 const YUFI = {
   siteUrl: 'https://yufi.mx',
-  image: domain + '/src/assets/companiesLogos/yufi.webp',
+  image: '/src/assets/companiesLogos/yufi.webp',
   name: 'Yufi',
   domain: 'yufi.mx',
 };
