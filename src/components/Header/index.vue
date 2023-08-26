@@ -46,8 +46,8 @@ export default {
     return {
       openMenu: false,
       logo: this.purpleLogo
-        ? '/src/assets/vicLogo_purple.svg'
-        : '/src/assets/vicLogo.svg',
+        ? '/assets/vicLogo_purple.svg'
+        : '/assets/vicLogo.svg',
     };
   },
   // Actions

@@ -14,18 +14,18 @@
         </div>
       </div>
       <div class="box-image">
-        <img class="profile" src="../../assets/profile-light.jpg" alt="" />
+        <img class="profile" src="/assets/profile-light.jpg" alt="" />
         <div class="box-line"></div>
-        <img class="profile-shapes" src="../../assets/profileShapes.svg" alt="" />
+        <img class="profile-shapes" src="/assets/profileShapes.svg" alt="" />
       </div>
     </div>
     <div class="box-right">
       <div class="box-image-mobile">
-        <img class="profile-mobile" src="../../assets/profile-light.jpg" alt="" />
+        <img class="profile-mobile" src="/assets/profile-light.jpg" alt="" />
         <div class="box-line-mobile"></div>
       </div>
     </div>
-    <img class="hero-line" src="../../assets/heroLine.svg" alt="" />
+    <img class="hero-line" src="/assets/heroLine.svg" alt="" />
   </section>
 </template>
 
