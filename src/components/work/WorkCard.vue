@@ -9,20 +9,21 @@ export default {
       default: true,
     },
     domain: String,
-    largeImage: false
+    largeImage: false,
+    id: Number,
   },
 };
 </script>
 <template>
   <figure>
-    <a :href="siteUrl" target="_blank">
+    <router-link :to="'/work/' + id">
       <img :src="image" alt="" :class="largeImage && 'img-large'" />
-    </a>
+    </router-link>
     <div class="project-info">
       <h3>{{ name }}</h3>
-      <a :href="siteUrl" target="_blank" :style="!isPublic ? 'opacity: 0;' : ''">{{
+      <router-link :to="'/work/' + id" target="_blank" :style="!isPublic ? 'opacity: 0;' : ''">{{
         isPublic ? domain : 'withOutDomain'
-      }}</a>
+      }}</router-link>
     </div>
   </figure>
 </template>

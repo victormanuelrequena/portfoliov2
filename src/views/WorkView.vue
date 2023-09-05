@@ -9,25 +9,35 @@
       <!-- List of works -->
       <div class="list-works">
         <!-- Work card -->
-        <WorkCard :siteUrl="FASTWPAY.siteUrl" :name="FASTWPAY.name" :image="FASTWPAY.image" :domain="FASTWPAY.domain" />
+        <WorkCard
+          :siteUrl="FASTWPAY.siteUrl"
+          :name="FASTWPAY.name"
+          :image="FASTWPAY.image"
+          :domain="FASTWPAY.domain"
+          :isPublic="false"
+          :id="FASTWPAY.id"
+        />
         <WorkCard
           :siteUrl="GRIVER.siteUrl"
           :name="GRIVER.name"
           :image="GRIVER.image"
           :domain="GRIVER.domain"
           :isPublic="false"
+          :id="GRIVER.id"
         />
         <WorkCard
           :siteUrl="PORTFOLIO.siteUrl"
           :name="PORTFOLIO.name"
           :image="PORTFOLIO.image"
           :domain="PORTFOLIO.domain"
+          :id="PORTFOLIO.id"
         />
         <WorkCard
           :siteUrl="NEXTSTATION.siteUrl"
           :name="NEXTSTATION.name"
           :image="NEXTSTATION.image"
           :domain="NEXTSTATION.domain"
+          :id="NEXTSTATION.id"
         />
         <WorkCard
           :siteUrl="GENIUS.siteUrl"
@@ -35,8 +45,9 @@
           :image="GENIUS.image"
           :domain="GENIUS.domain"
           :isPublic="false"
+          :id="GENIUS.id"
         />
-        <WorkCard :siteUrl="YUFI.siteUrl" :name="YUFI.name" :image="YUFI.image" :domain="YUFI.domain" />
+        <WorkCard :siteUrl="YUFI.siteUrl" :name="YUFI.name" :image="YUFI.image" :domain="YUFI.domain" :id="YUFI.id" />
       </div>
     </main>
   </section>

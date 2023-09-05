@@ -1,20 +1,20 @@
 <template>
   <header :class="static && 'static'">
-    <a href="/">
+    <router-link to="/">
       <img class="vic-logo" :src="logo" alt="Victor" />
-    </a>
+    </router-link>
     <button type="button" class="menu-btn" :class="openMenu && 'isOpen'" @click="toggle()"></button>
   </header>
   <div class="menu-list" :class="openMenu && 'menu-list-active'">
     <ul>
       <li>
-        <a href="/work">My Work</a>
+        <router-link to="/work" @click.native="toggle()">My Work</router-link>
       </li>
       <li>
-        <a href="/shelf">My Shelf</a>
+        <router-link to="/shelf" @click.native="toggle()">My Shelf</router-link>
       </li>
       <li>
-        <a @click="toggle()" href="/resume" target="_blank">My Resume</a>
+        <router-link to="/resume" target="_blank" @click.native="toggle()">My Resume</router-link>
       </li>
     </ul>
     <h5>SAY HELLO</h5>
