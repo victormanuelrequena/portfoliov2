@@ -1,23 +1,48 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import Header from '../../components/Header/index.vue';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { worksDataList } from '../../components/work/constants';
 import DetailProject from '../../components/work/DetailProject.vue';
 
 const router = useRouter();
 const isASingleProject = ref(true);
+const currentProject = ref({});
 
 function getDataProject() {
-  const projectId = parseInt(router.currentRoute.value.path.slice(-1));
-  const currentProject = worksDataList.find((work) => work.id === projectId);
-  console.log('🚀 ~ file: WorksList.vue:14 ~ getDataProject ~ currentProject:', currentProject);
-
-  isASingleProject.value = currentProject.isASingleProject;
+  let projectId = parseInt(router.currentRoute.value.path.slice(-1));
+  if (parseInt(router.currentRoute.value.path.slice(-2))) {
+    projectId = parseInt(router.currentRoute.value.path.slice(-2));
+  }
+  console.log('🚀 ~ file: WorksList.vue:14 ~ getDataProject ~ projectId:', projectId);
+  const currentProjectSelected = worksDataList.find((work) => {
+    if (work.id === projectId) {
+      return work;
+    }
+    if (work.projects) {
+      const project = work.projects.find((work) => work.id === projectId);
+      console.log('🚀 ~ file: WorksList.vue:25 ~ currentProjectSelected ~ project:', project);
+      return project;
+    }
+  });
+  console.log('🚀 ~ file: WorksList.vue:32 ~ currentProjectSelected ~ currentProjectSelected:', currentProjectSelected);
+  if (currentProjectSelected.projects.length > 0 && currentProjectSelected.id !== projectId) {
+    const projectChildrenSelected = currentProjectSelected.projects.find((project) => project.id === projectId);
+    console.log('🚀 ~ file: WorksList.vue:32 ~ getDataProject ~ projectChildrenSelected:', projectChildrenSelected);
+    currentProject.value = projectChildrenSelected;
+    isASingleProject.value = projectChildrenSelected.isASingleProject;
+    return;
+  }
+  isASingleProject.value = currentProjectSelected.isASingleProject;
+  currentProject.value = currentProjectSelected;
 }
 
 onMounted(() => {
   console.log('ROUTER___', router);
+  getDataProject();
+});
+watch(() => router.currentRoute.value, () => {
+  console.log("Se ejecuta el watch")
   getDataProject();
 });
 </script>
@@ -32,9 +57,9 @@ onMounted(() => {
       </div>
       <div class="projects-list-box">
         <div class="projects-list">
-          <div class="project-card">
+          <router-link :to="'/work/' + project.id" v-for="project in currentProject.projects" class="project-card">
             <div>
-              <h4>Fastwpay</h4>
+              <h4>{{ project.name }}</h4>
               <p>
                 Fastwpay es una pagina web dedicada al manejo administrativo de un plugin de wordpress para pagos
                 electronicos.
@@ -43,19 +68,7 @@ onMounted(() => {
             <div>
               <p><strong>01/2023</strong> - <strong>03/2023</strong></p>
             </div>
-          </div>
-          <div class="project-card">
-            <div>
-              <h4>Fastwpay</h4>
-              <p>
-                Fastwpay es una pagina web dedicada al manejo administrativo de un plugin de wordpress para pagos
-                electronicos.
-              </p>
-            </div>
-            <div>
-              <p><strong>01/2023</strong> - <strong>03/2023</strong></p>
-            </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </main>
@@ -113,6 +126,7 @@ section {
   padding: 40px 60px;
   border-radius: 10px;
   background-color: #503bd8ee;
+  cursor: pointer;
 }
 .project-card div:nth-child(1) {
   /* border: 1px solid red; */
