@@ -29,21 +29,18 @@ function getDataProject() {
   if (parseInt(router.currentRoute.value.path.slice(-2))) {
     projectId = parseInt(router.currentRoute.value.path.slice(-2));
   }
-  console.log('🚀 ~ file: WorksList.vue:14 ~ getDataProject ~ projectId:', projectId);
   const currentProjectSelected = worksDataList.find((work) => {
     if (work.id === projectId) {
       return work;
     }
     if (work.projects) {
       const project = work.projects.find((work) => work.id === projectId);
-      console.log('🚀 ~ file: WorksList.vue:25 ~ currentProjectSelected ~ project:', project);
       return project;
     }
   });
   console.log('🚀 ~ file: WorksList.vue:32 ~ currentProjectSelected ~ currentProjectSelected:', currentProjectSelected);
-  if (currentProjectSelected.projects.length > 0 && currentProjectSelected.id !== projectId) {
+  if (currentProjectSelected.projects?.length > 0 && currentProjectSelected.id !== projectId) {
     const projectChildrenSelected = currentProjectSelected.projects.find((project) => project.id === projectId);
-    console.log('🚀 ~ file: WorksList.vue:32 ~ getDataProject ~ projectChildrenSelected:', projectChildrenSelected);
     currentProject.value = projectChildrenSelected;
     return;
   }
@@ -56,16 +53,16 @@ onMounted(() => {
 </script>
 <template>
   <main>
-    <h1>Genius Builder</h1>
+    <h1>{{ currentProject.name }}</h1>
     <div class="carousel-container">
-      <CIcon class="arrow-icon" :icon="cilCaretLeft" size="sm" @click="backImage" />
+      <!-- <CIcon class="arrow-icon" :icon="cilCaretLeft" size="sm" @click="backImage" /> -->
       <img class="project-image" :src="currentProject.projectImages[imageSelected]" />
-      <CIcon
+      <!-- <CIcon
         class="arrow-icon"
         :icon="cilCaretRight"
         size="sm"
         @click="nextImage(currentProject.projectImages.length)"
-      />
+      /> -->
     </div>
     <div class="check-list">
       <input

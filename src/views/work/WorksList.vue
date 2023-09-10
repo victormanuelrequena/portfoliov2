@@ -14,21 +14,18 @@ function getDataProject() {
   if (parseInt(router.currentRoute.value.path.slice(-2))) {
     projectId = parseInt(router.currentRoute.value.path.slice(-2));
   }
-  console.log('🚀 ~ file: WorksList.vue:14 ~ getDataProject ~ projectId:', projectId);
   const currentProjectSelected = worksDataList.find((work) => {
     if (work.id === projectId) {
       return work;
     }
     if (work.projects) {
       const project = work.projects.find((work) => work.id === projectId);
-      console.log('🚀 ~ file: WorksList.vue:25 ~ currentProjectSelected ~ project:', project);
       return project;
     }
   });
-  console.log('🚀 ~ file: WorksList.vue:32 ~ currentProjectSelected ~ currentProjectSelected:', currentProjectSelected);
-  if (currentProjectSelected.projects.length > 0 && currentProjectSelected.id !== projectId) {
+  console.log("🚀 ~ file: WorksList.vue:27 ~ getDataProject ~ currentProjectSelected:", currentProjectSelected)
+  if (currentProjectSelected.projects?.length > 0 && currentProjectSelected.id !== projectId) {
     const projectChildrenSelected = currentProjectSelected.projects.find((project) => project.id === projectId);
-    console.log('🚀 ~ file: WorksList.vue:32 ~ getDataProject ~ projectChildrenSelected:', projectChildrenSelected);
     currentProject.value = projectChildrenSelected;
     isASingleProject.value = projectChildrenSelected.isASingleProject;
     return;
@@ -38,11 +35,9 @@ function getDataProject() {
 }
 
 onMounted(() => {
-  console.log('ROUTER___', router);
   getDataProject();
 });
 watch(() => router.currentRoute.value, () => {
-  console.log("Se ejecuta el watch")
   getDataProject();
 });
 </script>
@@ -52,8 +47,8 @@ watch(() => router.currentRoute.value, () => {
     <Header :static="true" :purpleLogo="true" />
     <main v-if="!isASingleProject">
       <div class="box">
-        <h2><strong @click="router.push('/work')">work/</strong><span>fastwpay</span></h2>
-        <p>List of projects I work on at fastwpay</p>
+        <h2><strong @click="router.push('/work')">work/</strong><span>{{ currentProject.name }}</span></h2>
+        <p>List of projects I work on at {{ currentProject.name }}</p>
       </div>
       <div class="projects-list-box">
         <div class="projects-list">
