@@ -11,7 +11,19 @@ export default {
       WAU: Constants.WAU,
       YUFI: Constants.YUFI,
       FASTWPAY: Constants.FASTWPAY,
+      SL: Constants.SL,
     };
+  },
+  methods: {
+    downloadCV() {
+      // Asegúrate de tener el archivo CV.pdf en la carpeta public
+      const link = document.createElement('a');
+      link.href = '/vic_resume.pdf';
+      link.download = 'Victor_Requena_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
   },
 };
 </script>
@@ -29,55 +41,59 @@ export default {
           ></path>
         </svg>
       </a>
-      <svg viewBox="8 8.003 48 47.997" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#474747e6"
-          d="M29.283 12.19a19.624 19.624 0 015.434 0 2 2 0 00.567-3.959 23.75 23.75 0 00-6.566 0 2 2 0 00.565 3.959z"
-        ></path>
-        <path
-          fill="#474747e6"
-          d="M42.91 10.619a2 2 0 00-1.82 3.561C47.819 17.621 52 24.449 52 32c0 11.028-8.972 20-20 20s-20-8.972-20-20c0-7.551 4.181-14.379 10.911-17.819a2 2 0 00-1.821-3.561C13.016 14.747 8 22.939 8 32c0 13.233 10.766 24 24 24 13.233 0 24-10.767 24-24 0-9.061-5.016-17.253-13.09-21.381z"
-        ></path>
-        <path
-          fill="#474747e6"
-          d="M22.586 36.586a2 2 0 000 2.828l8 8c.39.391.902.586 1.414.586s1.023-.195 1.414-.586l8-8a2 2 0 10-2.828-2.828L34 41.172V18a2 2 0 00-4 0v23.172l-4.586-4.586a2 2 0 00-2.828 0z"
-        ></path>
-      </svg>
-      <p>Descargar</p>
+      <div class="download-button" @click="downloadCV">
+        <svg viewBox="8 8.003 48 47.997" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#474747e6"
+            d="M29.283 12.19a19.624 19.624 0 015.434 0 2 2 0 00.567-3.959 23.75 23.75 0 00-6.566 0 2 2 0 00.565 3.959z"
+          ></path>
+          <path
+            fill="#474747e6"
+            d="M42.91 10.619a2 2 0 00-1.82 3.561C47.819 17.621 52 24.449 52 32c0 11.028-8.972 20-20 20s-20-8.972-20-20c0-7.551 4.181-14.379 10.911-17.819a2 2 0 00-1.821-3.561C13.016 14.747 8 22.939 8 32c0 13.233 10.766 24 24 24 13.233 0 24-10.767 24-24 0-9.061-5.016-17.253-13.09-21.381z"
+          ></path>
+          <path
+            fill="#474747e6"
+            d="M22.586 36.586a2 2 0 000 2.828l8 8c.39.391.902.586 1.414.586s1.023-.195 1.414-.586l8-8a2 2 0 10-2.828-2.828L34 41.172V18a2 2 0 00-4 0v23.172l-4.586-4.586a2 2 0 00-2.828 0z"
+          ></path>
+        </svg>
+        <p>Descargar</p>
+      </div>
     </div>
     <div class="grid-main">
       <div class="side-left">
         <!-- Personal info (Web, location and mailto) -->
         <div class="basic-info">
-          <!-- <a href="http://localhost:5173">requena.dev (Prox)</a> -->
-          <p>Delta Amacuro, Venezuela</p>
-          <a href="mailto:vincereimmanuel@gmail.com?subject=Hi, Victor">vincereimmanuel@gmail.com</a>
+          <p>🇻🇪 Venezuela</p>
+          <a href="mailto:requenadev1@gmail.com?subject=Hi, Victor">requenadev1@gmail.com</a>
         </div>
         <!-- Core technologies -->
         <div class="core-tech">
-          <h4>Core Technologies:</h4>
+          <h4>My Stack:</h4>
           <ul>
-            <li>Javascript</li>
             <li>Typescript</li>
-            <li>React</li>
-            <li>NextJS</li>
             <li>VueJS</li>
             <li>NuxtJS</li>
-            <li>Styled-components</li>
-            <li>Tailwind CSS</li>
             <li>Material UI</li>
+            <li>Styled-components</li>
             <li>Redux</li>
-            <li>NodeJS</li>
-            <li>ExpressJS</li>
             <li>NestJS</li>
+            <li>ExpressJS</li>
             <li>PHP</li>
             <li>Laravel</li>
             <li>SQL</li>
             <li>MongoDB</li>
             <li>MySQL</li>
             <li>PostgreSQL</li>
-            <li>Wordpress - Divi</li>
-            <li>WP Plugins</li>
+          </ul>
+
+          <h4>Here's where I'm currently most productive:</h4>
+          <ul>
+            <li>NextJS</li>
+            <li>Tailwind CSS</li>
+            <li>React Native</li>
+            <li>Flutter</li>
+            <li>NodeJS</li>
+            <li>AI (v0)</li>
           </ul>
         </div>
       </div>
@@ -87,22 +103,33 @@ export default {
           <br />
           Requena
         </h1>
-        <h2 class="profile-description">Frontend y Backend Developer</h2>
+        <h2 class="profile-description">Full-Stack/Product Engineer</h2>
         <p class="about-me">
-          Soy un desarrollador frontend y back especializado en crear proyectos web de alto valor. Me apasiona aprender
-          y enfrentar desafíos, abrazando los procesos de desarrollo.
+          Soy un desarrollador Full Stack, Iterativo, enfocado en el cliente y pragmatico. Apasiónado por crear
+          experiencias de alta calidad. Y tengo un impulso constante para aprender y explorar nuevas ideas.
         </p>
         <h4 class="experience">Experiencia</h4>
         <p class="exp-description">
-          He trabajado en un puñado de proyectos web a lo largo de los años, algunos de los cuales fueron para las
-          siguientes organizaciones:
+          En mis 4 años de experiencia, he desempeñado muchas funciones. Sin importar la escala, no me asusta el trabajo
+          que no tiene precedentes ni modelo a seguir. De hecho es lo que mas me atrae.
+          <br />
+          <br />
+          Siempre busco oportunidades para crecer yo mismo y para los demás. En todo lo que hago, me esfuerzo por crear
+          un entorno en el que se escuche a las personas y todos aprovechen las fortalezas de los demás.
+
+          <br />
+          <br />
+
+          Aqui dejo algunas de mis experiencias, cada una de ellas fue una experiencia invaluable por mas pequeña que
+          fuese, que no entraria en una pagina:
         </p>
         <!-- Experience Section -->
         <section class="exp-section">
-          <Project :company="GDS.name" :date="GDS.date" :role="GDS.role" :goalsList="GDS.goals" />
-          <Project :company="WAU.name" :date="WAU.date" :role="WAU.role" :goalsList="WAU.goals" />
-          <Project :company="FASTWPAY.name" :date="FASTWPAY.date" :role="FASTWPAY.role" :goalsList="FASTWPAY.goals" />
+          <Project :company="SL.name" :date="SL.date" :role="SL.role" :goalsList="SL.goals" />
           <Project :company="YUFI.name" :date="YUFI.date" :role="YUFI.role" :goalsList="YUFI.goals" />
+          <Project :company="FASTWPAY.name" :date="FASTWPAY.date" :role="FASTWPAY.role" :goalsList="FASTWPAY.goals" />
+          <Project :company="WAU.name" :date="WAU.date" :role="WAU.role" :goalsList="WAU.goals" />
+          <Project :company="GDS.name" :date="GDS.date" :role="GDS.role" :goalsList="GDS.goals" />
         </section>
       </div>
     </div>
@@ -119,7 +146,7 @@ export default {
 .resume-container {
   /* border: 1px solid red; */
   width: 1180px;
-  background-color: var(--whiteSmoke);
+  background-color: #f0efe7;
   min-height: 100vh;
   margin: 0 auto;
   margin-top: 60px;
@@ -130,6 +157,7 @@ export default {
   width: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -147,7 +175,7 @@ export default {
 }
 .box p {
   font-size: 12px;
-  color: #474747e6;
+  color: #1d3108;
   margin-left: 6px;
 }
 .grid-main {
@@ -155,7 +183,7 @@ export default {
   grid-template-columns: 30% 70%;
   height: 100%;
   padding: 0 56px;
-  padding-top: 107px;
+  padding-top: 80px;
 }
 .side-left,
 .main-content {
@@ -180,7 +208,7 @@ export default {
   cursor: pointer;
 }
 .basic-info p:nth-child(2) {
-  color: var(--textBlack);
+  color: #1d3108;
   font-weight: 400;
   margin: 2px 0;
   margin-top: 6px;
@@ -208,6 +236,7 @@ export default {
   transform: translateY(0.2em) scaleY(0.5);
 }
 .core-tech {
+  margin-top: -24px;
 }
 .core-tech h4 {
   color: var(--purple);
@@ -220,7 +249,7 @@ export default {
   margin-top: 6px;
 }
 .core-tech li {
-  color: #474747bf;
+  color: #1d3108;
   list-style: none;
   font-size: 14.4px;
   margin-top: 8px;
@@ -246,7 +275,7 @@ export default {
 }
 .main-content h2.profile-description {
   font-size: 23px;
-  color: var(--textBlack);
+  color: #1d3108;
   font-weight: light;
   margin-top: 12px;
 }
@@ -256,7 +285,7 @@ export default {
   font-size: 17.28px;
   font-weight: light;
   line-height: 175%;
-  color: var(--textBlack);
+  color: #1d3108;
   position: relative;
 }
 .main-content .about-me::after {
@@ -266,7 +295,7 @@ export default {
   height: 1px;
   left: 20px;
   width: 155%;
-  background-color: var(--textGray);
+  background-color: #1d3108;
 }
 .experience {
   /* border: 1px solid red; */
@@ -326,5 +355,24 @@ export default {
     left: 50px;
     bottom: 40px;
   }
+}
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0px 5px;
+  transition: opacity 0.2s ease;
+  margin-top: -4px;
+}
+
+.download-button p {
+  margin-left: 0px;
+  font-size: 12px;
+  color: #1d3108;
+}
+
+.download-button:hover {
+  opacity: 0.7;
 }
 </style>

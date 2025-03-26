@@ -8,14 +8,14 @@ let documentGenerated = false;
 async function main() {
   try {
     const pdfURL = `http://localhost:${SHELF_PORT}/resume?pdf=true`;
-    const pdfFilePath = 'public/resume.pdf';
+    const pdfFilePath = 'public/vic_resume.pdf';
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     await page.setViewport({
       width: 1680,
-      height: 971,
+      height: 1971,
       deviceScaleFactor: 1.5,
     });
 
@@ -26,7 +26,7 @@ async function main() {
       printBackground: true,
       pageRanges: '1',
       width: '1230px',
-      height: '2440px',
+      height: '3440px',
       path: pdfFilePath,
       margin: { top: '85px', right: '85px', bottom: '85px', left: '85px' },
     });
