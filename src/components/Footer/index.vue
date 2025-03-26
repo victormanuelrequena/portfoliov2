@@ -34,7 +34,7 @@ const props = defineProps({
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© Victor Requena 2023</p>
+        <p>© Victor Requena 2025</p>
       </div>
     </div>
   </footer>
