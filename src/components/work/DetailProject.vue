@@ -192,7 +192,7 @@ onUnmounted(() => {
     <section class="project-details">
       <div class="project-overview">
         <h2>Overview</h2>
-        <p>
+        <p class="project-overview-text">
           {{
             currentProject.overview || 'A detailed overview of this project including its purpose and main features.'
           }}
@@ -291,6 +291,18 @@ h1 {
   font-weight: 600;
   color: var(--textBlack);
   padding-bottom: 40px;
+}
+
+h2 {
+  text-align: left;
+}
+
+.project-overview-text {
+  text-align: left;
+}
+
+.project-challenges p {
+  text-align: left;
 }
 
 .carousel-container {

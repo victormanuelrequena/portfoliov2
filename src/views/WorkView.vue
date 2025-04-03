@@ -10,7 +10,6 @@
       <div class="list-works">
         <!-- Work card -->
         <WorkCard :siteUrl="SL.siteUrl" :name="SL.name" :image="SL.image" :domain="SL.domain" :id="SL.id" />
-
         <WorkCard
           :siteUrl="FASTWPAY.siteUrl"
           :name="FASTWPAY.name"
@@ -83,20 +82,20 @@ export default {
 <style scoped>
 section {
   background-color: var(--bgColor);
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 .box {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 220px;
+  padding-top: 150px;
 }
 .box h2,
 .box span {
   color: var(--textBlack);
   font-weight: 700;
-  font-size: 32px;
+  font-size: 26px;
 }
 .box h2 span {
   opacity: 0.7;
@@ -105,19 +104,62 @@ section {
   font-weight: 400;
   margin: 18px 0 22px 0;
   color: var(--textBlack);
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 20px;
 }
 .list-works {
-  width: 86%;
+  width: 90%;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 30px auto;
   display: grid;
-  row-gap: 40px;
-  grid-template-columns: repeat(3, minmax(368px, 1fr));
+  gap: 30px;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+  section {
+    padding-bottom: 70px;
+  }
+  .box {
+    padding-top: 180px;
+  }
+  .box h2,
+  .box span {
+    font-size: 28px;
+  }
+  .box p {
+    font-size: 17px;
+  }
+  .list-works {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Desktop */
 @media (min-width: 1024px) {
   section {
     padding-bottom: 160px;
+  }
+  .box {
+    padding-top: 220px;
+  }
+  .box h2,
+  .box span {
+    font-size: 32px;
+  }
+  .box p {
+    font-size: 18px;
+    padding: 0;
+  }
+  .list-works {
+    width: 90%;
+    margin: 40px auto;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 32px;
   }
 }
 </style>

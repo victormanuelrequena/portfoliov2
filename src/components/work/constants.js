@@ -161,7 +161,7 @@ const SL = {
       id: 51,
       name: 'Crop Connect App',
       siteUrl: '',
-      description: '',
+      description: 'Aplicación móvil para la gestión de cultivos y producción.',
       projectImages: [
         '/assets/projects_images/genius/genius-builder/login.png',
         '/assets/projects_images/genius/genius-builder/register.png',
@@ -206,7 +206,7 @@ const SL = {
       id: 52,
       name: 'Banco de Venezuela App',
       siteUrl: '',
-      description: '',
+      description: 'Aplicación móvil para transacciones bancarias y consultas de finanzas.',
       projectImages: [
         '/assets/projects_images/sl/bdv_app/login.png',
         '/assets/projects_images/sl/bdv_app/dashboard2.png',
@@ -235,7 +235,7 @@ const SL = {
       id: 53,
       name: 'Banco de Venezuela Web',
       siteUrl: '',
-      description: '',
+      description: 'Aplicación web para transacciones bancarias y consultas de finanzas.',
       projectImages: [
         '/assets/projects_images/genius/lifted-meds/welcome.png',
         '/assets/projects_images/genius/lifted-meds/welcome-2.png',
@@ -262,7 +262,7 @@ const SL = {
       id: 54,
       name: 'Banco Digital de Caracas (IMCP) App',
       siteUrl: '',
-      description: '',
+      description: 'Aplicación móvil para transacciones bancarias y consultas de finanzas.',
       projectImages: [
         '/assets/projects_images/genius/lifted-meds/welcome.png',
         '/assets/projects_images/genius/lifted-meds/welcome-2.png',
@@ -289,7 +289,7 @@ const SL = {
       id: 55,
       name: 'Banco Digital de Caracas (IMCP) Web',
       siteUrl: '',
-      description: '',
+      description: 'Aplicación web para transacciones bancarias y consultas de finanzas.',
       projectImages: [],
     },
   ],
