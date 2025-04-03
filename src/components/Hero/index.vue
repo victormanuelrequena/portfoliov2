@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Header />
+    <Header :purpleLogo="purpleLogo" :currentSection="currentSection" />
     <div class="box-left">
       <div class="box-presentation">
         <h1>
@@ -35,6 +35,16 @@ export default {
   components: {
     Header,
   },
+  props: {
+    purpleLogo: {
+      type: Boolean,
+      default: false,
+    },
+    currentSection: {
+      type: String,
+      default: 'hero',
+    },
+  },
 };
 </script>
 
@@ -45,21 +55,26 @@ section {
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  overflow: hidden;
+  grid-template-rows: auto auto;
+  overflow: visible;
+  background-color: var(--whiteSmoke);
+  margin-bottom: 0;
 }
 .hero-line {
   position: absolute;
   left: -85px;
+  bottom: -120px;
   transform: rotate(-14deg);
   display: none;
+  z-index: 1;
+  height: 120%;
 }
 .box-left,
 .box-right {
   width: 100%;
   height: 100%;
   background-color: var(--purple);
-  padding-top: 80px;
+  padding-top: 60px;
 }
 .box-left {
   padding: 0 62px;
@@ -68,9 +83,10 @@ section {
 }
 .box-right {
   background-color: var(--appleGreen);
+  margin-bottom: 0;
 }
 .box-presentation {
-  padding-top: 146px;
+  padding-top: 100px;
 }
 .point {
   font-size: 102px;
@@ -161,8 +177,9 @@ section {
 @media (min-width: 1024px) {
   section {
     grid-template-columns: 67% 33%;
-    /* height: clamp(29.63rem, calc(9.91rem + 30.8vw), 46.88rem); */
-    height: 95vh;
+    height: 80vh;
+    min-height: 0;
+    overflow: visible;
   }
   .box-image {
     display: block;
@@ -172,8 +189,8 @@ section {
   }
   .box-right,
   .box-left {
-    padding-top: clamp(8.75rem, calc(5.18rem + 5.58vw), 11.88rem);
-    height: 100vh;
+    padding-top: clamp(6rem, calc(4rem + 3vw), 8rem);
+    height: 80vh;
   }
   .box-presentation {
     padding-top: 40px;
@@ -192,8 +209,9 @@ section {
     padding-left: clamp(5.63rem, calc(-1.52rem + 11.16vw), 11.88rem);
   }
   .hero-line {
-    display: flex;
+    display: block;
     position: absolute;
+    height: 120%;
   }
 }
 </style>
