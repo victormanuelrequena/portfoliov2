@@ -9,6 +9,8 @@
       <!-- List of works -->
       <div class="list-works">
         <!-- Work card -->
+        <WorkCard :siteUrl="SL.siteUrl" :name="SL.name" :image="SL.image" :domain="SL.domain" :id="SL.id" />
+
         <WorkCard
           :siteUrl="FASTWPAY.siteUrl"
           :name="FASTWPAY.name"
@@ -47,7 +49,6 @@
           :isPublic="false"
           :id="GENIUS.id"
         />
-        <WorkCard :siteUrl="YUFI.siteUrl" :name="YUFI.name" :image="YUFI.image" :domain="YUFI.domain" :id="YUFI.id" />
       </div>
     </main>
   </section>
@@ -73,7 +74,7 @@ export default {
       PORTFOLIO: Constants.PORTFOLIO,
       NEXTSTATION: Constants.NEXTSTATION,
       GENIUS: Constants.GENIUS,
-      YUFI: Constants.YUFI,
+      SL: Constants.SL,
     };
   },
 };
