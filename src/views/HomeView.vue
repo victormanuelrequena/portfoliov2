@@ -112,6 +112,7 @@ onMounted(() => {
 main {
   overflow-x: hidden;
   position: relative;
+  background-color: var(--smoke);
 }
 
 .snap-container {
@@ -187,10 +188,26 @@ main {
     min-height: auto;
     height: auto;
     scroll-snap-align: none;
+    overflow: visible;
   }
 
-  #hero {
+  #hero,
+  #design,
+  #build,
+  #contact,
+  #footer {
     min-height: auto;
+    height: auto;
+  }
+
+  #design,
+  #build,
+  #contact {
+    padding: 60px 0;
+  }
+
+  #footer {
+    max-height: 500px;
   }
 }
 </style>

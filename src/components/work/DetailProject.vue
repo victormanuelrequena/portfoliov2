@@ -456,13 +456,20 @@ h2 {
 
 .lightbox-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
 }
 
 .lightbox-image {
   max-width: 90%;
-  max-height: 80%;
+  max-height: 90vh;
   border-radius: 10px;
   transition: all 0.3s ease;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 /* Mobile frame styles for lightbox */
@@ -478,6 +485,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .mobile-screen-container-lightbox {
@@ -485,6 +493,9 @@ h2 {
   height: 100%;
   overflow: hidden;
   border-radius: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-image-lightbox {
@@ -496,6 +507,7 @@ h2 {
   max-height: none;
   border-radius: 38px;
   display: block;
+  margin: 0 auto;
 }
 
 .mobile-home-indicator-lightbox {
@@ -520,9 +532,10 @@ h2 {
   top: 20px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 40px;
   pointer-events: none;
+  z-index: 10001;
 }
 
 .lightbox-arrow {
@@ -549,6 +562,7 @@ h2 {
   cursor: pointer;
   pointer-events: all;
   transition: transform 0.2s ease;
+  z-index: 10001;
 }
 
 .lightbox-close:hover {
@@ -714,6 +728,16 @@ h2 {
     height: 5px;
     bottom: 10px;
   }
+
+  .lightbox-container {
+    width: 95%;
+    height: 95%;
+  }
+
+  .lightbox-image {
+    max-width: 95%;
+    max-height: 95vh;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -768,6 +792,16 @@ h2 {
     width: 100px;
     height: 4px;
     bottom: 8px;
+  }
+
+  .lightbox-container {
+    width: 98%;
+    height: 98%;
+  }
+
+  .lightbox-image {
+    max-width: 98%;
+    max-height: 98vh;
   }
 }
 </style>

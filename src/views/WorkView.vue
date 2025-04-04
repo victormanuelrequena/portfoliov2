@@ -19,12 +19,12 @@
           :id="FASTWPAY.id"
         />
         <WorkCard
-          :siteUrl="GRIVER.siteUrl"
-          :name="GRIVER.name"
-          :image="GRIVER.image"
-          :domain="GRIVER.domain"
+          :siteUrl="WCAR.siteUrl"
+          :name="WCAR.name"
+          :image="WCAR.image"
+          :domain="WCAR.domain"
           :isPublic="false"
-          :id="GRIVER.id"
+          :id="WCAR.id"
         />
         <WorkCard
           :siteUrl="PORTFOLIO.siteUrl"
@@ -69,7 +69,7 @@ export default {
   data() {
     return {
       FASTWPAY: Constants.FASTWPAY,
-      GRIVER: Constants.GRIVER,
+      WCAR: Constants.WCAR,
       PORTFOLIO: Constants.PORTFOLIO,
       NEXTSTATION: Constants.NEXTSTATION,
       GENIUS: Constants.GENIUS,

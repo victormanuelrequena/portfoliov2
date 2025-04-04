@@ -26,14 +26,39 @@ const FASTWPAY = {
   ],
 };
 
-const GRIVER = {
+const WCAR = {
   id: 1,
-  siteUrl: 'https://griver.mx',
-  image: '/assets/companiesLogos/griver.svg',
-  name: 'Griver',
-  domain: 'griver.mx',
+  siteUrl: 'https://wcar.com',
+  image: '/assets/companiesLogos/wcar.svg',
+  name: 'wcar',
+  domain: 'wcar.co',
   description: '',
   isASingleProject: false,
+  projects: [
+    {
+      id: 11,
+      name: 'wcar.co',
+      siteUrl: 'https://wcar.com',
+      description: 'wcar.co es una plataforma de compra y venta de vehículos usados con peritaje online.',
+      projectImages: [
+        '/assets/projects_images/wcar/web/home.png',
+        '/assets/projects_images/wcar/web/buy_car.png',
+        '/assets/projects_images/wcar/web/wanda.png',
+        '/assets/projects_images/wcar/web/car_details.png',
+        '/assets/projects_images/wcar/web/car_peritaje.png',
+        '/assets/projects_images/wcar/web/cotiza.png',
+        '/assets/projects_images/wcar/web/credit.png',
+        '/assets/projects_images/wcar/web/scheduler.png',
+        '/assets/projects_images/wcar/web/taller.png',
+        '/assets/projects_images/wcar/web/tramites.png',
+        '/assets/projects_images/wcar/web/blog.png',
+      ],
+      isASingleProject: true,
+      overview: 'wcar.co is a platform for buying and selling used vehicles with online appraisal.',
+      technologies: ['React', 'Typescript', 'SEO'],
+      challenges: 'Developing a platform for buying and selling used vehicles with online appraisal.',
+    },
+  ],
 };
 
 const PORTFOLIO = {
@@ -295,11 +320,11 @@ const SL = {
   ],
 };
 
-export const worksDataList = [FASTWPAY, GRIVER, PORTFOLIO, NEXTSTATION, GENIUS, SL];
+export const worksDataList = [FASTWPAY, WCAR, PORTFOLIO, NEXTSTATION, GENIUS, SL];
 
 export default {
   FASTWPAY,
-  GRIVER,
+  WCAR,
   PORTFOLIO,
   NEXTSTATION,
   GENIUS,

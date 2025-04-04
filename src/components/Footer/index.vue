@@ -46,9 +46,11 @@ export default {};
 footer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   background-color: var(--darkPurple);
   padding: 80px 44px;
+  box-sizing: border-box;
+  margin: 0;
 }
 .footer-main {
   /* border: 1px solid red; */
@@ -107,12 +109,42 @@ footer {
     height: 100vh;
   }
   .footer-main {
+    padding-bottom: 60px;
   }
   .wrapper {
     width: 92%;
   }
   .say-hello > ul:nth-child(2) {
     margin-left: 180px;
+  }
+}
+
+@media (max-width: 1023px) {
+  footer {
+    padding: 60px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 500px;
+    height: auto !important;
+  }
+
+  .large {
+    padding: 60px 30px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: 500px;
+  }
+
+  .footer-main {
+    padding-bottom: 40px;
+  }
+
+  .footer-bottom p {
+    margin-top: 20px;
+  }
+
+  .wrapper {
+    height: auto;
   }
 }
 </style>

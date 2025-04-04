@@ -84,6 +84,7 @@ section {
 .box-right {
   background-color: var(--appleGreen);
   margin-bottom: 0;
+  padding-bottom: 80px;
 }
 .box-presentation {
   padding-top: 100px;
@@ -191,6 +192,7 @@ section {
   .box-left {
     padding-top: clamp(6rem, calc(4rem + 3vw), 8rem);
     height: 80vh;
+    padding-bottom: 0;
   }
   .box-presentation {
     padding-top: 40px;
