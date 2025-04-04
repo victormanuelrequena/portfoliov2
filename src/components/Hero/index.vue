@@ -4,10 +4,10 @@
     <div class="box-left">
       <div class="box-presentation">
         <h1>
-          Frontend <br />
-          Developer<span class="point">.</span>
+          Product <br />
+          Engineer<span class="point">.</span>
         </h1>
-        <p>I like to craft solid and scalable frontend products with great user experiences.</p>
+        <p>I like to craft solid and scalable products with great user experiences.</p>
         <div class="sub-description-box">
           <p>Highly skilled at progressive enhancement, design systems & UI Engineering.</p>
           <p>Proven experience building successful products for clients across several countries.</p>

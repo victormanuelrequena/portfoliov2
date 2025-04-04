@@ -122,6 +122,12 @@ main {
   scroll-behavior: smooth;
   overflow-x: hidden;
   scroll-padding: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.snap-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .section {
@@ -182,6 +188,12 @@ main {
     overflow-y: auto;
     height: auto;
     scroll-snap-type: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
   }
 
   .section {
