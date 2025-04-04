@@ -11,20 +11,20 @@
         <!-- Work card -->
         <WorkCard :siteUrl="SL.siteUrl" :name="SL.name" :image="SL.image" :domain="SL.domain" :id="SL.id" />
         <WorkCard
-          :siteUrl="FASTWPAY.siteUrl"
-          :name="FASTWPAY.name"
-          :image="FASTWPAY.image"
-          :domain="FASTWPAY.domain"
-          :isPublic="false"
-          :id="FASTWPAY.id"
-        />
-        <WorkCard
           :siteUrl="WCAR.siteUrl"
           :name="WCAR.name"
           :image="WCAR.image"
           :domain="WCAR.domain"
           :isPublic="false"
           :id="WCAR.id"
+        />
+        <WorkCard
+          :siteUrl="FASTWPAY.siteUrl"
+          :name="FASTWPAY.name"
+          :image="FASTWPAY.image"
+          :domain="FASTWPAY.domain"
+          :isPublic="false"
+          :id="FASTWPAY.id"
         />
         <WorkCard
           :siteUrl="PORTFOLIO.siteUrl"
