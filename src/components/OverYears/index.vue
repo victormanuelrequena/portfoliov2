@@ -10,16 +10,19 @@ const router = useRouter();
       <div class="box-left">
         <h2>Over the years</h2>
         <p>
-          I've built products for companies and businesses around the globe ranging from marketing websites to complex
-          solutions and enterprise apps with focus on fast, elegant and accessible user experiences.<br /><br />
-          Currently, I work at Shopify as a Senior Frontend Engineer crafting thoughtful and inclusive experiences that
-          adhere to web standards for over 3 million merchants across the world.<br /><br />
-          Before now, I was Principal Frontend Engineer at hellotax, where I worked on a suite of tools and services
-          tailored towards automated VAT compliance for multi-channel sellers in Europe.<br /><br />
-          Prior to hellotax, I was Senior frontend engineering consultant with Pixel2HTML, building JavaScript
-          applications and interfaces for orgs and individuals.<br /><br />
-          I once also led the frontend team at Conectar, an e-learning startup through building multiple React
-          applications into a single robust learning platform.
+          I've developed solutions for a range of clients, from web applications to tools for specific industries, with
+          a focus on delivering efficient and user-friendly experiences.<br /><br />
+          Currently, I am a Full-Stack/Product Engineer, passionate about creating high-quality experiences and driven
+          to learn and explore new ideas.   <br /><br />
+          Previously, I worked as a Software Engineer at Sliscorp, where I developed web and mobile applications for
+          major clients in the financial sector, implemented key functionalities for digital banking, and contributed to
+          all stages of the software development lifecycle.   <br /><br />
+          I also worked as a Software Engineer at WCAR, developing a website for vehicle sales and two applications, one
+          in Flutter and one in React Native. Additionally, I have experience as a Frontend Developer at FASTWPAY,
+          contributing to both frontend and backend tasks.   <br /><br />
+          Earlier in my career, I was a Frontend Developer at WAU, where I participated in the development of a platform
+          for Mexican customs agents, importers, and exporters. I also worked as a Frontend Developer at Genius Digital
+          Solutions, where I contributed to the development of a web application connected to a WordPress engine.
         </p>
       </div>
       <div class="box-right">
@@ -94,8 +97,8 @@ section {
   }
   .box-left p {
     font-size: 1rem;
-    max-width: 440px;
-    margin-top: 40px;
+    max-width: 480px;
+    margin-top: 8px;
   }
   .box-right {
     max-width: 700px;
