@@ -5,6 +5,7 @@ import Footer from '../components/Footer/index.vue';
 import SendMeMessage from '../components/SendMeMessage/SendMeMessage.vue';
 import BuildWrite from '../components/BuildWrite/index.vue';
 import DesignEngineering from '../components/DesignEngineering/index.vue';
+import OverYears from '../components/OverYears/index.vue';
 
 const currentSection = ref('hero');
 const isMobile = ref(false);
@@ -13,6 +14,7 @@ const usePurpleLogo = ref(false);
 const sections = [
   { id: 'hero', useGreenLogo: true },
   { id: 'design', useGreenLogo: false },
+  { id: 'over_years', useGreenLogo: true },
   { id: 'build', useGreenLogo: false },
   { id: 'contact', useGreenLogo: false },
   { id: 'footer', useGreenLogo: true },
@@ -87,6 +89,9 @@ onMounted(() => {
     <div id="design" class="section">
       <DesignEngineering />
     </div>
+    <div id="over_years" class="section">
+      <OverYears />
+    </div>
     <div id="build" class="section">
       <BuildWrite />
     </div>
@@ -141,6 +146,7 @@ main {
 }
 
 #design,
+#over_years,
 #build,
 #contact,
 #footer {
@@ -205,6 +211,7 @@ main {
 
   #hero,
   #design,
+  #over_years,
   #build,
   #contact,
   #footer {

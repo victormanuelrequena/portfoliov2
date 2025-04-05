@@ -64,6 +64,7 @@ export default {
         this.isMobile && 'position-static',
         (this.currentSection === 'hero' || this.inFooter) && 'green-menu',
         this.inFooter && 'footer-active',
+        this.currentSection === 'over_years' && 'over-years-menu',
       ];
     },
   },
@@ -104,6 +105,11 @@ export default {
   background-color: var(--appleGreen) !important;
 }
 
+.over-years-menu .menu-btn::before,
+.over-years-menu .menu-btn::after {
+  background-color: var(--appleGreen) !important;
+}
+
 .position-static {
   position: absolute !important;
   top: 0;
@@ -141,7 +147,6 @@ header {
 }
 
 .menu-btn {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -276,13 +281,11 @@ header {
     position: fixed !important;
   }
 
-  /* Hacer que el menú sea púrpura en Hero en desktop */
   header[class*='green-menu'] .menu-btn::before,
   header[class*='green-menu'] .menu-btn::after {
     background-color: var(--purple) !important;
   }
 
-  /* Mantener el menú verde en Footer en desktop */
   header[class*='green-menu'][class*='footer-active'] .menu-btn::before,
   header[class*='green-menu'][class*='footer-active'] .menu-btn::after {
     background-color: var(--appleGreen) !important;
