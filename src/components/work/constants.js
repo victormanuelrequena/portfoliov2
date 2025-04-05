@@ -93,12 +93,12 @@ const PORTFOLIO = {
   domain: 'requena.dev',
 };
 
-const NEXTSTATION = {
+const VEIDT_HEALTH = {
   id: 3,
-  siteUrl: 'https://nextstation.cl',
-  image: 'https://s3.amazonaws.com/nextstation.cl/wp-content/uploads/2019/08/27185722/logo-black-45.png',
-  name: 'NextStation',
-  domain: 'nextstation.cl',
+  siteUrl: 'https://veidt.health',
+  image: '/assets/companiesLogos/veidt_health.png',
+  name: 'Veidt Health',
+  domain: 'veidthealth.com',
 };
 
 const GENIUS = {
@@ -113,7 +113,7 @@ const GENIUS = {
       id: 41,
       name: 'Genius Builder',
       siteUrl: 'https://genius.builder.io',
-      description: '',
+      description: 'Genius Builder is a platform for creating and managing websites.',
       projectImages: [
         '/assets/projects_images/genius/genius-builder/login.png',
         '/assets/projects_images/genius/genius-builder/register.png',
@@ -153,12 +153,15 @@ const GENIUS = {
         '/assets/projects_images/genius/genius-builder/not-found.png',
       ],
       isASingleProject: true,
+      overview: 'Genius Builder is a platform for creating and managing websites.',
+      technologies: ['React', 'Typescript', 'NextJS', 'Styled Components'],
+      challenges: 'Developing a platform for creating and managing websites.',
     },
     {
       id: 42,
       name: 'Landing GDS',
       siteUrl: '',
-      description: '',
+      description: 'Landing GDS is a landing page for Genius Pro team.',
       projectImages: [
         '/assets/projects_images/genius/gds-landing/home.png',
         '/assets/projects_images/genius/gds-landing/home-2.png',
@@ -167,12 +170,14 @@ const GENIUS = {
         '/assets/projects_images/genius/gds-landing/our-products.png',
       ],
       isASingleProject: true,
+      overview: 'Landing GDS is a landing page for Genius Builder.',
+      technologies: ['React', 'Typescript', 'NextJS', 'Styled Components'],
+      challenges: 'Developing a landing page for Genius Builder.',
     },
     {
       id: 43,
       name: 'Lifted Meds',
       siteUrl: '',
-      description: '',
       projectImages: [
         '/assets/projects_images/genius/lifted-meds/welcome.png',
         '/assets/projects_images/genius/lifted-meds/welcome-2.png',
@@ -194,6 +199,10 @@ const GENIUS = {
         '/assets/projects_images/genius/lifted-meds/payment-3-3.png',
       ],
       isASingleProject: true,
+      description: 'Lifted Meds is a platform for selling cannabis products.',
+      overview: 'Lifted Meds is a platform for selling cannabis products.',
+      technologies: ['React', 'Typescript', 'NextJS', 'Styled Components'],
+      challenges: 'Developing a platform for selling cannabis products.',
     },
   ],
 };
@@ -322,13 +331,13 @@ const SL = {
   ],
 };
 
-export const worksDataList = [FASTWPAY, WCAR, PORTFOLIO, NEXTSTATION, GENIUS, SL];
+export const worksDataList = [FASTWPAY, WCAR, PORTFOLIO, VEIDT_HEALTH, GENIUS, SL];
 
 export default {
   FASTWPAY,
   WCAR,
   PORTFOLIO,
-  NEXTSTATION,
+  VEIDT_HEALTH,
   GENIUS,
   SL,
 };

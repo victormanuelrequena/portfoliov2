@@ -34,11 +34,11 @@
           :id="PORTFOLIO.id"
         />
         <WorkCard
-          :siteUrl="NEXTSTATION.siteUrl"
-          :name="NEXTSTATION.name"
-          :image="NEXTSTATION.image"
-          :domain="NEXTSTATION.domain"
-          :id="NEXTSTATION.id"
+          :siteUrl="VEIDT_HEALTH.siteUrl"
+          :name="VEIDT_HEALTH.name"
+          :image="VEIDT_HEALTH.image"
+          :domain="VEIDT_HEALTH.domain"
+          :id="VEIDT_HEALTH.id"
         />
         <WorkCard
           :siteUrl="GENIUS.siteUrl"
@@ -71,7 +71,7 @@ export default {
       FASTWPAY: Constants.FASTWPAY,
       WCAR: Constants.WCAR,
       PORTFOLIO: Constants.PORTFOLIO,
-      NEXTSTATION: Constants.NEXTSTATION,
+      VEIDT_HEALTH: Constants.VEIDT_HEALTH,
       GENIUS: Constants.GENIUS,
       SL: Constants.SL,
     };
