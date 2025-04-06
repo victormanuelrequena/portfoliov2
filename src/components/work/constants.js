@@ -298,35 +298,72 @@ const SL = {
       id: 54,
       name: 'Banco Digital de Caracas (IMCP) App',
       siteUrl: '',
-      description: 'Aplicación móvil para transacciones bancarias y consultas de finanzas.',
+      description: 'Mobile application for banking transactions and financial inquiries.',
       projectImages: [
-        '/assets/projects_images/genius/lifted-meds/welcome.png',
-        '/assets/projects_images/genius/lifted-meds/welcome-2.png',
-        '/assets/projects_images/genius/lifted-meds/welcome-3.png',
-        '/assets/projects_images/genius/lifted-meds/location.png',
-        '/assets/projects_images/genius/lifted-meds/login.png',
-        '/assets/projects_images/genius/lifted-meds/register.png',
-        '/assets/projects_images/genius/lifted-meds/reset-password.png',
-        // '/assets/projects_images/genius/lifted-meds/shop.png',
-        '/assets/projects_images/genius/lifted-meds/shop-2.png',
-        '/assets/projects_images/genius/lifted-meds/products.png',
-        '/assets/projects_images/genius/lifted-meds/cart.png',
-        '/assets/projects_images/genius/lifted-meds/cart-empty.png',
-        '/assets/projects_images/genius/lifted-meds/payment-1.png',
-        '/assets/projects_images/genius/lifted-meds/payment-1-2.png',
-        '/assets/projects_images/genius/lifted-meds/payment-2.png',
-        '/assets/projects_images/genius/lifted-meds/payment-3.png',
-        '/assets/projects_images/genius/lifted-meds/payment-3-2.png',
-        '/assets/projects_images/genius/lifted-meds/payment-3-3.png',
+        '/assets/projects_images/sl/bdc_app/dashboard.png',
+        '/assets/projects_images/sl/bdc_app/dashboard_quick_actions.png',
+        '/assets/projects_images/sl/bdc_app/dashboard_red.png',
+
+        // Main menus
+        '/assets/projects_images/sl/bdc_app/transactions_menu.png',
+        '/assets/projects_images/sl/bdc_app/consultations_menu.png',
+        '/assets/projects_images/sl/bdc_app/services_menu.png',
+        '/assets/projects_images/sl/bdc_app/requests_menu.png',
+
+        // Mobile Pay features
+        '/assets/projects_images/sl/bdc_app/mobile_pay.png',
+        '/assets/projects_images/sl/bdc_app/quick_mobilepay.png',
+        '/assets/projects_images/sl/bdc_app/mobilepay_affiliation.png',
+        '/assets/projects_images/sl/bdc_app/mobilepay_confirmation.png',
+        '/assets/projects_images/sl/bdc_app/mobilepay_success.png',
+        '/assets/projects_images/sl/bdc_app/mobilepay_voucher.png',
+        '/assets/projects_images/sl/bdc_app/mobilepay_voucher_toast.png',
+
+        // Account and Beneficiaries
+        '/assets/projects_images/sl/bdc_app/account_consultations.png',
+        '/assets/projects_images/sl/bdc_app/account_details.png',
+        '/assets/projects_images/sl/bdc_app/beneficiaries.png',
+        '/assets/projects_images/sl/bdc_app/add_beneficiary.png',
+
+        // Notifications
+        '/assets/projects_images/sl/bdc_app/notifications.png',
+        '/assets/projects_images/sl/bdc_app/notification_details.png',
+        '/assets/projects_images/sl/bdc_app/confirm_delete_notification_modal.png',
+
+        // Security and Self management
+        '/assets/projects_images/sl/bdc_app/security.png',
+        '/assets/projects_images/sl/bdc_app/biometry.png',
+        '/assets/projects_images/sl/bdc_app/self_management.png',
+
+        // UI Components and Preferences
+        '/assets/projects_images/sl/bdc_app/datepicker.png',
+        '/assets/projects_images/sl/bdc_app/download_modal.png',
+        '/assets/projects_images/sl/bdc_app/preferences_blue.png',
+        '/assets/projects_images/sl/bdc_app/preferences_green.png',
+        '/assets/projects_images/sl/bdc_app/preferences_cyan.png',
+        '/assets/projects_images/sl/bdc_app/preferences_purple.png',
+        '/assets/projects_images/sl/bdc_app/preferences_red.png',
       ],
       isASingleProject: true,
+      type: 'mobile',
+      overview:
+        'Banco Digital de Caracas App is a mobile application that allows users to perform banking transactions and manage their finances.',
+      technologies: ['React Native', 'Expo'],
+      challenges:
+        'Developing a mobile banking application with multiple customization options, high-level security features, and a user-friendly interface.',
     },
     {
       id: 55,
       name: 'Banco Digital de Caracas (IMCP) Web',
       siteUrl: '',
-      description: 'Aplicación web para transacciones bancarias y consultas de finanzas.',
+      description: 'Web application for banking transactions and financial inquiries.',
       projectImages: [],
+      isASingleProject: true,
+      overview:
+        'Banco Digital de Caracas Web is a platform that allows users to perform banking transactions and manage their finances through a web interface.',
+      technologies: ['React', 'TypeScript', 'NextJS', 'React Hook Form'],
+      challenges:
+        'Developing a secure and responsive web application for banking operations with a seamless user experience.',
     },
   ],
 };

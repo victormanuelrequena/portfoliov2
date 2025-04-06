@@ -291,6 +291,7 @@ h1 {
   font-weight: 600;
   color: var(--textBlack);
   padding-bottom: 40px;
+  text-align: center;
 }
 
 h2 {
@@ -424,6 +425,10 @@ h2 {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15px;
 }
 
 .check-list input[type='radio'] {
